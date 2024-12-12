@@ -1,0 +1,13 @@
+name: Workflow Runners
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu-echo:
+    runs-on: self-hosted
+    steps:
+      - name: Show OS
+        run: |
+          echo "This job is running on an Ubuntu runner."
+          echo "Runner OS: ${{ runner.os }}"
